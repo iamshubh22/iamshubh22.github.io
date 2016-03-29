@@ -3,20 +3,20 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
    
-      <title>biomadeira.github.io/jasper/</title>
+      <title>ishubh.me</title>
    
-   <link>http://biomadeira.github.io/jasper/</link>
-   <description>A beautiful narrative written with the world's most elegant publishing platform. The story begins here.</description>
+   <link>http://ishubh.me/</link>
+   <description>Personal blog</description>
    <language>en-uk</language>
-   <managingEditor> Casper McFadden</managingEditor>
+   <managingEditor> Shubham Gupta</managingEditor>
    <atom:link href="rss" rel="self" type="application/rss+xml" />
    
 	<item>
 	  <title>A Full and Comprehensive Style Test</title>
-	  <link>/jasper//a-full-and-comprehensive-style-test</link>
-	  <author>Casper McFadden</author>
-	  <pubDate>2014-09-27T11:18:00+01:00</pubDate>
-	  <guid>/jasper//a-full-and-comprehensive-style-test</guid>
+	  <link>//a-full-and-comprehensive-style-test</link>
+	  <author>Shubham Gupta</author>
+	  <pubDate>2014-09-27T15:48:00+05:30</pubDate>
+	  <guid>//a-full-and-comprehensive-style-test</guid>
 	  <description><![CDATA[
 	     <p>This is just an <em>ipsis verbis</em> copy of the first example running on the <a href="http://demo.ghost.io">Ghost Demo</a>. This shows how you can use html styling to achieve your hopes.</p>
 
@@ -136,11 +136,65 @@
 
 <p>Code can be presented inline, like <code>&lt;?php bloginfo('stylesheet_url'); ?&gt;</code>, or within a <code>&lt;pre&gt;</code> block. Because we have more specific typographic needs for code, we’ll specify Consolas and Monaco ahead of the browser-defined monospace font.</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nf">#container</span> <span class="p">{</span>
+<p>Code blocks can also be inserted with the highlight tag as below:</p>
+<pre>
+    
+    {% highlight language-x %}
+    # some code
+    {% endhighlight %}
+    
+</pre>
+
+<p>More information about code highlighting in jykell can be found  <a href="https://jekyllrb.com/docs/templates/#code-snippet-highlighting">in Jekyll documentation</a>.</p>
+
+<p>These area a couple of examples showing the resulting highlighted code:</p>
+
+<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="c">/* css code sample */</span>
+<span class="nf">#container</span> <span class="p">{</span>
     <span class="k">float</span><span class="o">:</span> <span class="k">left</span><span class="p">;</span>
     <span class="k">margin</span><span class="o">:</span> <span class="m">0</span> <span class="m">-240px</span> <span class="m">0</span> <span class="m">0</span><span class="p">;</span>
     <span class="k">width</span><span class="o">:</span> <span class="m">100%</span><span class="p">;</span>
 <span class="p">}</span></code></pre></figure>
+
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// javascript code sample</span>
+<span class="kr">import</span> <span class="p">{</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">}</span> <span class="nx">as</span> <span class="nx">p</span> <span class="nx">from</span> <span class="s1">&#39;point&#39;</span><span class="p">;</span>
+<span class="kr">const</span> <span class="nx">ANSWER</span> <span class="o">=</span> <span class="mi">42</span><span class="p">;</span>
+
+<span class="kr">class</span> <span class="nx">Car</span> <span class="kr">extends</span> <span class="nx">Vehicle</span> <span class="p">{</span>
+    <span class="nx">constructor</span><span class="p">(</span><span class="nx">speed</span><span class="p">,</span> <span class="nx">cost</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kr">super</span><span class="p">(</span><span class="nx">speed</span><span class="p">);</span>
+
+        <span class="kd">var</span> <span class="nx">c</span> <span class="o">=</span> <span class="nx">Symbol</span><span class="p">(</span><span class="s1">&#39;cost&#39;</span><span class="p">);</span>
+        <span class="k">this</span><span class="p">[</span><span class="nx">c</span><span class="p">]</span> <span class="o">=</span> <span class="nx">cost</span><span class="p">;</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">intro</span> <span class="o">=</span> <span class="err">`</span><span class="nx">This</span> <span class="nx">is</span> <span class="nx">a</span> <span class="nx">car</span> <span class="nx">runs</span> <span class="nx">at</span>
+            <span class="nx">$</span><span class="p">{</span><span class="nx">speed</span><span class="p">}.</span><span class="err">`</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">for</span> <span class="p">(</span><span class="kd">let</span> <span class="nx">num</span> <span class="nx">of</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">num</span> <span class="o">+</span> <span class="mi">0</span><span class="nx">b111110111</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nx">$initHighlight</span><span class="p">(</span><span class="nx">block</span><span class="p">,</span> <span class="nx">flags</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">try</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">block</span><span class="p">.</span><span class="nx">className</span><span class="p">.</span><span class="nx">search</span><span class="p">(</span><span class="sr">/\bno\-highlight\b/</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="k">return</span> <span class="nx">processBlock</span><span class="p">(</span><span class="nx">block</span><span class="p">.</span><span class="kd">function</span><span class="p">,</span> <span class="kc">true</span><span class="p">,</span> <span class="mh">0x0F</span><span class="p">)</span> <span class="o">+</span> <span class="s1">&#39; class=&quot;&quot;&#39;</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">catch</span> <span class="p">(</span><span class="nx">e</span><span class="p">)</span> <span class="p">{</span>
+        <span class="cm">/* handle exception */</span>
+        <span class="kd">var</span> <span class="nx">e4x</span> <span class="o">=</span>
+            <span class="o">&lt;</span><span class="nx">div</span><span class="o">&gt;</span><span class="nx">Example</span>
+                <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="mi">1234</span><span class="o">&lt;</span><span class="err">/p&gt;&lt;/div&gt;;</span>
+    <span class="p">}</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="nx">classes</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// &quot;0 / 2&quot; should not be parsed as regexp</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">checkCondition</span><span class="p">(</span><span class="nx">classes</span><span class="p">[</span><span class="nx">i</span><span class="p">])</span> <span class="o">===</span> <span class="kc">undefined</span><span class="p">)</span>
+            <span class="k">return</span> <span class="sr">/\d+[\s/]/g</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nb">Array</span><span class="p">.</span><span class="nx">every</span><span class="p">(</span><span class="nx">classes</span><span class="p">,</span> <span class="nb">Boolean</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kr">export</span>  <span class="nx">$initHighlight</span><span class="p">;</span></code></pre></figure>
 
 <hr />
 
@@ -378,10 +432,10 @@ c.draw = function() {
 
 	<item>
 	  <title>The Businessman & the fisherman</title>
-	  <link>/jasper//the-businessman-and-fisherman</link>
-	  <author>Casper McFadden</author>
-	  <pubDate>2014-08-12T11:18:00+01:00</pubDate>
-	  <guid>/jasper//the-businessman-and-fisherman</guid>
+	  <link>//the-businessman-and-fisherman</link>
+	  <author>Shubham Gupta</author>
+	  <pubDate>2014-08-12T15:48:00+05:30</pubDate>
+	  <guid>//the-businessman-and-fisherman</guid>
 	  <description><![CDATA[
 	     <p>An American businessman took a vacation to a small coastal Mexican village on doctor’s orders. Unable to sleep after an urgent phone call from the office the first morning, he walked out to the pier to clear his head. A small boat with just one fisherman had docked, and inside the boat were several large yellowfin tuna. The American complimented the Mexican on the quality of his fish.</p>
 
@@ -413,15 +467,19 @@ c.draw = function() {
 
 <p>“Then you would retire and move to a small coastal fishing village, where you would sleep late, fish a little, play with your kids, take a siesta with your wife, and stroll in to the village in the evenings where you could sip wine and play your guitar with your amigos.”</p>
 
+<p>Adapted from the &quot;Anekdote zur Senkung der Arbeitsmoral&quot; by <strong>Heinrich Böll</strong></p>
+
+<p>An influential German write and Nobel Prize for Literature in 1972.</p>
+
 	  ]]></description>
 	</item>
 
 	<item>
 	  <title>I Have a Dream</title>
-	  <link>/jasper//i-have-a-dream</link>
-	  <author>Casper McFadden</author>
-	  <pubDate>1963-08-28T11:18:00+01:00</pubDate>
-	  <guid>/jasper//i-have-a-dream</guid>
+	  <link>//i-have-a-dream</link>
+	  <author>Shubham Gupta</author>
+	  <pubDate>1963-08-28T15:48:00+05:30</pubDate>
+	  <guid>//i-have-a-dream</guid>
 	  <description><![CDATA[
 	     <p>I am happy to join with you today in what will go down in history as the greatest demonstration for freedom in the history of our nation.</p>
 
@@ -526,10 +584,10 @@ c.draw = function() {
 
 	<item>
 	  <title>The Purpose of Education</title>
-	  <link>/jasper//the-purpose-of-education</link>
-	  <author>Casper McFadden</author>
-	  <pubDate>1948-12-12T10:18:00+00:00</pubDate>
-	  <guid>/jasper//the-purpose-of-education</guid>
+	  <link>//the-purpose-of-education</link>
+	  <author>Shubham Gupta</author>
+	  <pubDate>1948-12-12T15:48:00+05:30</pubDate>
+	  <guid>//the-purpose-of-education</guid>
 	  <description><![CDATA[
 	     <p>As I engage in the so-called &quot;bull sessions&quot; around and about the school, I too often find that most college men have a misconception of the purpose of education. Most of the &quot;brethren&quot; think that education should equip them with the proper instruments of exploitation so that they can forever trample over the masses. Still others think that education should furnish them with noble ends rather than means to an end.</p>
 
@@ -554,10 +612,10 @@ c.draw = function() {
 
 	<item>
 	  <title>Out to Sea</title>
-	  <link>/jasper//out-to-sea</link>
-	  <author>Casper McFadden</author>
-	  <pubDate>1912-07-24T10:18:00+00:00</pubDate>
-	  <guid>/jasper//out-to-sea</guid>
+	  <link>//out-to-sea</link>
+	  <author>Shubham Gupta</author>
+	  <pubDate>1912-07-24T16:11:20+05:53</pubDate>
+	  <guid>//out-to-sea</guid>
 	  <description><![CDATA[
 	     <p>I had this story from one who had no business to tell it to me, or to any other. I may credit the seductive influence of an old vintage upon the narrator for the beginning of it, and my own skeptical incredulity during the days that followed for the balance of the strange tale.</p>
 
@@ -644,10 +702,10 @@ c.draw = function() {
 
 	<item>
 	  <title>Looking-Glass house</title>
-	  <link>/jasper//looking-glass-house</link>
-	  <author>Casper McFadden</author>
-	  <pubDate>1871-03-18T11:18:00+01:00</pubDate>
-	  <guid>/jasper//looking-glass-house</guid>
+	  <link>//looking-glass-house</link>
+	  <author>Shubham Gupta</author>
+	  <pubDate>1871-03-18T16:11:28+05:53</pubDate>
+	  <guid>//looking-glass-house</guid>
 	  <description><![CDATA[
 	     <p>One thing was certain, that the white kitten had had nothing to do with it:— it was the black kitten’s fault entirely. For the white kitten had been having its face washed by the old cat for the last quarter of an hour (and bearing it pretty well, considering); so you see that it couldn’t have had any hand in the mischief. 
 The way Dinah washed her children’s faces was this: first she held the poor thing down by its ear with one paw, and then with the other paw she rubbed its face all over, the wrong way, beginning at the nose: and just now, as I said, she was hard at work on the white kitten, which was lying quite still and trying to purr — no doubt feeling that it was all meant for its good. 
@@ -687,10 +745,10 @@ The poor King looked puzzled and unhappy, and struggled with the pencil for some
 
 	<item>
 	  <title>Down The Rabbit Hole</title>
-	  <link>/jasper//down-the-rabbit-hole</link>
-	  <author>Casper McFadden</author>
-	  <pubDate>1865-11-26T11:18:00+01:00</pubDate>
-	  <guid>/jasper//down-the-rabbit-hole</guid>
+	  <link>//down-the-rabbit-hole</link>
+	  <author>Shubham Gupta</author>
+	  <pubDate>1865-11-26T16:11:28+05:53</pubDate>
+	  <guid>//down-the-rabbit-hole</guid>
 	  <description><![CDATA[
 	     <p>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, &#39;and what is the use of a book,&#39; thought Alice &#39;without pictures or conversation?&#39;</p>
 
@@ -751,10 +809,10 @@ The poor King looked puzzled and unhappy, and struggled with the pencil for some
 
 	<item>
 	  <title>Gettysburg Address</title>
-	  <link>/jasper//gettysburg-address</link>
-	  <author>Casper McFadden</author>
-	  <pubDate>1863-11-19T11:18:00+01:00</pubDate>
-	  <guid>/jasper//gettysburg-address</guid>
+	  <link>//gettysburg-address</link>
+	  <author>Shubham Gupta</author>
+	  <pubDate>1863-11-19T16:11:28+05:53</pubDate>
+	  <guid>//gettysburg-address</guid>
 	  <description><![CDATA[
 	     <p>Fourscore and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.</p>
 
