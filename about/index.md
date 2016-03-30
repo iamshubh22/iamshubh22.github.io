@@ -7,8 +7,6 @@ logo: 'assets/images/ghost.png'
 current: about
 ---
 
-This is a demo blog for Ghost, it contains dummy content which allows you to click around and see what a Ghost blog running the default theme looks like.
+I am **Shubham Gupta**, currently in second year, pursuing Bachelor of Technology with major in Computer Science and Engineering from The LNM Institute of Information Technology, Jaipur, India.
 
-We use this for testing and for reference!
-
-If you'd like to set up your own blog, head on over to [https://ghost.org](https://ghost.org) and sign up.
+I am passionate about Free and Open Source Software and love to contribute to it.

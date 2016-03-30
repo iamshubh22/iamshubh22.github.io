@@ -1,6 +1,6 @@
 # Jekyll configuration
 markdown:       kramdown
-highlighter:    pygments
+highlighter:    rouge
 paginate:       5
 language:       'en-uk'
 
