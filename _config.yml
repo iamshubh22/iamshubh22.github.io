@@ -1,12 +1,12 @@
 # Jekyll configuration
-markdown:       redcarpet
+markdown:       kramdown
 highlighter:    pygments
 paginate:       5
 language:       'en-uk'
 
 # Website info
 name:           'Shubham Gupta'
-description:    'Personal blog'
+description:    'Open source enthusiast'
 
 # Author's info
 author:         'Shubham Gupta'
@@ -15,9 +15,9 @@ nickname:       'iamshubh22'
 bio:            'Open source enthusiast'
 location:       'Jaipur, India'
 url:            'http://ishubh.me/'
-image:          ''
+image:          'assets/images/shubham.jpg'
 
-short_url:      'ishubh.me'
+short_url:      'ishubh.me/'
 baseurl:        /
 
 # Permalinks
